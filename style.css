@@ -1,0 +1,22 @@
+body{
+    color: aqua;
+    font-size: 15PX;
+    text-align: center;
+    border: 1PX blue solid;
+    border-radius: 10px;
+}
+.classe{
+    color:black;
+    font-style: italic;
+    
+}
+#ide{
+    color: brown;
+}
+.dive{
+    color: blueviolet;
+    
+}
+.romice{
+    color: brown;
+}
