@@ -4,6 +4,12 @@ body{
     text-align: center;
     border: 1PX blue solid;
     border-radius: 10px;
+    width: auto;
+    height: auto;
+    border: 1px black solid;
+    border-radius: 4px;
+    margin: 100px 100px 100px 100px;
+    padding: 10px;
 }
 .classe{
     color:black;
