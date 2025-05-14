@@ -1,0 +1,248 @@
+/* Réinitialisation de base et styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Pour gérer les flottants */
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+.bg-light {
+    background-color: #fff;
+}
+
+/* En-tête et Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Barre de navigation qui reste en haut */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active { /* Pour marquer le lien actif avec JS plus tard */
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Section Héros (Accueil) */
+.hero {
+    background: #007bff url('https://via.placeholder.com/1920x600?text=Belle+Image+de+Fond') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0; /* Plus d'espace pour la section héros */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ff6600;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none; /* pour les boutons de formulaire */
+    cursor: pointer; /* pour les boutons de formulaire */
+}
+
+.cta-button:hover {
+    background: #cc5200;
+    color: #fff; /* S'assurer que la couleur du texte reste blanche au survol */
+}
+
+/* Section À Propos */
+#apropos .about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Espace entre l'image et le texte */
+}
+
+#apropos .about-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    text-align: center;
+}
+
+.service-item {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item img {
+    max-width: 80px; /* Réduire la taille des icônes */
+    margin-bottom: 1rem;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Section Contact */
+#contact form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact form textarea {
+    resize: vertical; /* Permet le redimensionnement vertical seulement */
+}
+
+#contact form button {
+    width: 100%; /* Bouton pleine largeur */
+}
+
+/* Pied de page */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem; /* Espace avant le pied de page */
+}
+
+/* Améliorations pour la responsivité */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav {
+        margin-top: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    #apropos .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #apropos .about-image {
+        margin-bottom: 1rem;
+    }
+}
