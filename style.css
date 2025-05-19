@@ -26,3 +26,27 @@ body{
 .romice{
     color: brown;
 }
+
+.cont{
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1PX red solid;
+    background-color: black;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+li{
+    width: 100px;
+}
+a{
+    text-decoration: none;
+}
+a:hover {
+    color: #0056b3;
+}
